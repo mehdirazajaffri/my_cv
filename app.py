@@ -84,7 +84,7 @@ st.set_page_config(
 
 # ===== SIDEBAR =====
 with st.sidebar:
-    st.title("⚙️ Settings")
+    st.title("Settings")
     
     # Model selection
     model_choice = st.radio(
@@ -152,7 +152,7 @@ with st.sidebar:
 # Header with title and ATS score
 header_col1, header_col2 = st.columns([3, 1])
 with header_col1:
-    st.title("Make My CV ATS-Friendly")
+    st.title("Make my CV ATS friendly bro")
     st.caption("Optimize your CV for Applicant Tracking Systems using AI")
 with header_col2:
     if st.session_state.get("ats_score") is not None:
