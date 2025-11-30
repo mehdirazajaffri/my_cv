@@ -1,3 +1,9 @@
 *.aux
 *.log
 *.out
+
+# Streamlit secrets - never commit API keys!
+.streamlit/secrets.toml
+
+# Output directory
+output/

@@ -53,7 +53,16 @@ def update_cv_gemini(system_prompt, job_description, latex_cv, api_key=None):
     if api_key:
         genai.configure(api_key=api_key)
     
-    model = genai.GenerativeModel("gemini-1.5-flash")
+    # Try different model names in order of preference
+    # Updated to use available models from the API
+    model_names = [
+        "gemini-2.5-flash",
+        "gemini-2.5-pro",
+        "gemini-1.5-flash-latest",
+        "gemini-1.5-flash",
+        "gemini-1.5-pro-latest",
+        "gemini-pro"
+    ]
     
     prompt = f"""
     Instructions: {system_prompt}
@@ -66,9 +75,19 @@ def update_cv_gemini(system_prompt, job_description, latex_cv, api_key=None):
 
     IMPORTANT: return ONLY the full updated LaTeX code.
     """
-
-    response = model.generate_content(prompt)
-    return response.text
+    
+    last_error = None
+    for model_name in model_names:
+        try:
+            model = genai.GenerativeModel(model_name)
+            response = model.generate_content(prompt)
+            return response.text
+        except Exception as e:
+            last_error = e
+            continue
+    
+    # If all models fail, raise the last error
+    raise Exception(f"Failed to generate content with any Gemini model. Last error: {str(last_error)}")
 
 
 def ats_score_llm(model_choice, job_desc, cv_text, openai_api_key=None, gemini_api_key=None):
@@ -116,12 +135,33 @@ def ats_score_llm(model_choice, job_desc, cv_text, openai_api_key=None, gemini_a
     else:
         if gemini_api_key:
             genai.configure(api_key=gemini_api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash")
-        res = model.generate_content(prompt)
-        try:
-            return int(res.text.strip())
-        except ValueError:
-            # Try to extract number from response
-            import re
-            numbers = re.findall(r'\d+', res.text)
-            return int(numbers[0]) if numbers else 0
+        
+        # Try different model names in order of preference
+        # Updated to use available models from the API
+        model_names = [
+            "gemini-2.5-flash",
+            "gemini-2.5-pro",
+            "gemini-1.5-flash-latest",
+            "gemini-1.5-flash",
+            "gemini-1.5-pro-latest",
+            "gemini-pro"
+        ]
+        
+        last_error = None
+        for model_name in model_names:
+            try:
+                model = genai.GenerativeModel(model_name)
+                res = model.generate_content(prompt)
+                try:
+                    return int(res.text.strip())
+                except ValueError:
+                    # Try to extract number from response
+                    import re
+                    numbers = re.findall(r'\d+', res.text)
+                    return int(numbers[0]) if numbers else 0
+            except Exception as e:
+                last_error = e
+                continue
+        
+        # If all models fail, return 0
+        raise Exception(f"Failed to calculate ATS score with any Gemini model. Last error: {str(last_error)}")
