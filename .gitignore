@@ -7,3 +7,52 @@
 
 # Output directory
 output/
+
+# Log files
+logs/
+*.log
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE cache files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Streamlit cache
+.streamlit/cache/
+
+# Jupyter Notebook cache
+.ipynb_checkpoints/
+
+# pytest cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy cache
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+*.__pycache__

@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt]{article}
-\usepackage[top=0.75in, bottom=0.75in, left=0.5in, right=0.5in]{geometry}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
@@ -19,9 +19,9 @@
 {\large\bfseries\uppercase}
 {}
 {0em}
-{\titlerule[0.5pt]\vspace{0.4em}}
+{\titlerule[0.3pt]\vspace{0.2em}}
 
-\titlespacing*{\section}{0pt}{0.8em}{0.2em}
+\titlespacing*{\section}{0pt}{0.5em}{0.1em}
 
 % Custom subsection format
 \titleformat{\subsection}
@@ -30,7 +30,7 @@
 {0em}
 {}
 
-\titlespacing*{\subsection}{0pt}{0.5em}{0.3em}
+\titlespacing*{\subsection}{0pt}{0.2em}{0.1em}
 
 % Optimize spacing for lists
 \setlist[itemize]{noitemsep, topsep=3pt, leftmargin=18pt, itemsep=2pt, parsep=0pt}
@@ -38,7 +38,7 @@
 
 % Paragraph spacing
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{5pt}
+\setlength{\parskip}{3pt}
 
 \begin{document}
 
@@ -47,140 +47,103 @@
     {\Huge \textbf{MEHDI RAZA}}\\[0.3em]
     \vspace{0.2em}
     \color{darkgray}
-    \faMapMarker*~Dubai, UAE -- Golden-Visa Holder \quad
+    \faMapMarker*~Dubai, United Arab Emirates \quad
     \faPhone~\href{tel:+971507459015}{+971 50 745 9015} \quad 
     \faEnvelope~\href{mailto:mehdirazajaffri@gmail.com}{mehdirazajaffri@gmail.com}\\[0.3em]
-    \faLinkedin~\href{https://linkedin.com/in/mehdi-raza-jaffri}{mehdi-raza-jaffri} \quad 
-    \faGithub~\href{https://github.com/mehdirazajaffri}{mehdirazajaffri} \quad 
+    \faLinkedin~\href{https://linkedin.com/in/mehdi-raza-jaffri}{https://linkedin.com/in/mehdi-raza-jaffri} \quad 
+    \faGithub~\href{https://github.com/mehdirazajaffri}{https://github.com/mehdirazajaffri} \quad 
     \faGlobe~\href{https://mehdiraza.dev}{https://mehdiraza.dev}\\[0.3em]
 \end{center}
 
 
 \section*{Professional Summary}
-\begin{itemize}[leftmargin=*]
-    \item Senior Software Engineer and \textbf{AWS Certified} with \textbf{8+ years} of expertise in designing and deploying scalable \textbf{backend systems} and cloud-native \textbf{AI/ML} solutions on \textbf{AWS}. Specialized in \textbf{Python} and advanced \textbf{event-driven architectures}.
-    \item Spearheaded the implementation of \textbf{RAG (Retrieval-Augmented Generation)} solutions, driving an \textbf{80\%} improvement in operational efficiency, a \textbf{90\%} reduction in a cloud infrastructure costs, and a \textbf{40\%} boost in system reliability.
-    \item Led \textbf{Agile} development teams to successfully automate the \textbf{CI/CD} lifecycle, streamlining software delivery and achieving a \textbf{70\%} reduction in deployment cycle times.
-\end{itemize}
+Senior Software Engineer with 9 years of experience building scalable and cloud-native backend systems. Expert in Python, event-driven architectures, and serverless applications. Proven track record delivering high-impact solutions: \textbf{reducing cloud costs by 90\%}, \textbf{improving system reliability by 40\%}, and \textbf{accelerating deployment cycles by 70\%}.
 
 
 \section*{Technical Skills}
-\begin{multicols}{6}
-    \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
-        \item Python
-        \item FastAPI
-        \item Django/drf
-        \item Java
-        \item Spring Boot
-        \item Node.js
-        \item Go
-        \item AWS Lambda
-        \item Step Functions
-        \item SageMaker
-        \item Serverless Framework
-        \item AWS Glue
-        \item AWS CDK
-        \item LangGraph
-        \item Pydantic AI
-        \item Pandas
-        \item PyTorch
-        \item OpenCV
-        \item scikit-learn
-        \item Next.js
-        \item TypeScript
-        \item React Native
-        \item Flutter
-        \item Docker
-        \item Jenkins
-        \item GitHub Actions
-        \item Ansible
-        \item NATS
-        \item RabbitMQ
-        \item New Relic
-        \item Sentry
-        \item Microservices
-        \item Event-Driven
-        \item REST
-        \item GraphQL
-        \item PostgreSQL
-        \item MySQL
-        \item DynamoDB
-        \item MongoDB
-        \item Redis
-        \item Terraform
-    \end{itemize}
-    \end{multicols}
 
-
+\textbf{Languages}: Python, TypeScript, JavaScript, Java, Go, SQL \newline
+\textbf{Backend \& Frameworks}: FastAPI, Django/DRF, Spring Boot, Node.js, GraphQL, Microservices \newline
+\textbf{AI/ML}: SageMaker, LangChain, LangGraph, RAG, PyTorch, scikit-learn, Pandas, OpenCV \newline
+\textbf{Cloud \& DevOps}: AWS, Docker, AWS CDK, Jenkins, Ansible, Serverless Frameworks, RabbitMQ, NATS, Redis \newline
+\textbf{Frontend \& Mobile}: Next.js, React, Flutter \newline
+\textbf{Databases}: PostgreSQL, MySQL, MongoDB, DynamoDB, Elasticsearch \newline
+\textbf{Monitoring}: New Relic, Sentry, Grafana, Datadog \newline
 
 \section*{Professional Experience}
 
-\subsection*{Senior Software Engineer \hfill Jan 2024 -- Oct 2025}
+\subsection*{Senior Software Engineer \hfill Dubai, UAE}
 \vspace{-0.6em}
-\textit{Aether $|$ Dubai, UAE (Remote)}
+\textbf{\textit{Connect Resources (Aether) \hfill Jan 2024 -- Oct 2025}}
+\vspace{-0.6em}
 \begin{itemize}
-    \item Architected an ML-based rebill optimization system using \textbf{AWS SageMaker}, increasing successful transactions by \textbf{15\%} through intelligent retry timing.
-    \item Developed an LLM-powered chatbot with \textbf{RAG-based query generation}, reducing manual data lookup time by \textbf{80\%} and supporting over 100 internal users with real-time business insights. Deployed fine-tuned LLMs to production using SageMaker endpoints.
-    \item Designed and developed \textbf{microservices} based backend systems for e-commerce, memberships, and chat platforms to support scalable and fault-tolerant applications.
-    \item Led the implementation of a \textbf{NATS messaging architecture} with clustered configuration, improving system reliability by \textbf{40\%} and reducing latency by \textbf{50\%}.
-    \item Automated deployment pipelines using \textbf{Ansible, Docker, and Jenkins}, reducing provisioning time by \textbf{70\%}.
+    \item Architected an ML-driven rebill optimization engine using SageMaker, increasing successful recurring transactions by \textbf{15\%} via intelligent retry timings.
+    \item Engineered an LLM-powered internal chatbot with RAG capabilities, reducing manual data lookup time by \textbf{80\%} and supporting over 100 internal users with real-time business insights.
+    \item Designed and developed microservices for e-commerce, memberships, and chat systems, ensuring high availability and fault tolerance.
+    \item Implemented a high-performance NATS messaging architecture (clustered), reducing system latency by \textbf{50\%} and improving reliability by \textbf{40\%}.
+    \item Automated provisioning and deployments using Ansible, Docker, and Jenkins, cutting setup time by \textbf{70\%}.
     \item \textit{\textbf{Tech Stack:}} Python, FastAPI, Java, Spring Boot, Node.js, AWS (Lambda, Glue, SageMaker, ECS), MongoDB, NATS, Go.
 \end{itemize}
 
-\subsection*{Lead Full Stack Developer \hfill May 2022 -- Dec 2023}
+\subsection*{Full Stack Software Engineer \hfill Dubai, UAE}
 \vspace{-0.6em}
-\textit{OJ Lifestyle $|$ Dubai, UAE}
+\textbf{\textit{OJ Lifestyle \hfill May 2022 -- Dec 2023}}
+\vspace{-0.6em}
 \begin{itemize}
-    \item Owned the end-to-end \textbf{agile development lifecycle}, improving team delivery velocity by \textbf{30\%} through refined sprint planning and automation.
-    \item Architected a highly available, scalable loyalty platform, supporting over \textbf{5,000 active user subscriptions} annually.
-    \item Developed a vendor-facing portal empowering \textbf{50+ vendors} to manage offers independently, increasing vendor engagement by \textbf{40\%}.
-    \item Engineered a resilient payment solution using Stripe's subscription, achieving a \textbf{99.99\% payment success rate} and reduced involuntary churn by \textbf{25\%}.
-    \item Streamlined CI/CD pipelines using GitHub Actions, reducing deployment time by \textbf{60\%}.
-    \item \textit{\textbf{Tech Stack:}} Python, Django, MongoDB, Stripe, Next.js, Nest.js, Flutter, AWS (Lambda, ECS, EC2, ALB, RDS, S3, etc...).
+    \item Led the full agile development lifecycle, boosting team delivery velocity by \textbf{30\%} through improved sprint planning and automation.
+    \item Designed a scalable, highly available loyalty platform supporting \textbf{5,000+} active user subscriptions.
+    \item Launched a vendor management portal used by \textbf{50+ partners}, increasing vendor engagement by \textbf{40\%}.
+    \item Built a fault-tolerant Stripe subscription billing solution, achieving \textbf{99.99\% success rate} and reducing involuntary churn by \textbf{25\%}.
+    \item Streamlined CI/CD using GitHub Actions, reducing deployment time by \textbf{60\%}.
+    \item \textit{\textbf{Tech Stack:}} Python, Django, DRF, PostgreSQL, MongoDB, Stripe, Next.js, Flutter, AWS (Lambda, ECS, EC2, ALB, RDS, S3, Step Functions).
 \end{itemize}
 
-\subsection*{Full Stack Developer \hfill Mar 2021 -- Apr 2022}
+\subsection*{Full Stack Software Engineer \hfill Dubai, UAE}
 \vspace{-0.6em}
-\textit{Berkeley Assets $|$ Dubai, UAE}
+\textbf{\textit{Berkeley Assets \hfill Mar 2021 -- Apr 2022}}
+\vspace{-0.6em}
 \begin{itemize}
-    \item Designed a scalable, \textbf{serverless backend} using AWS Lambda and Django, reducing infrastructure costs by \textbf{40\%}.
-    \item Built and maintained internal CRMs, boosting team productivity by \textbf{25\%} through process automation.
-    \item Developed a custom Django Admin back office with exposed DRF APIs and integrated payment gateways (Stripe, Telr), achieving \textbf{99.9\% transaction reliability}.
-    \item Built cross-platform mobile applications (Assets Portfolio - Novus), increasing feature delivery speed by \textbf{50\%}.
-    \item \textit{\textbf{Tech Stack:}} Python, Django REST Framework, React Native, AWS Stack, Jenkins, Bitbucket Pipelines.
+    \item Developed a serverless backend using AWS Lambda and Django, reducing infrastructure costs by \textbf{40\%}.
+    \item Created internal CRMs, increasing team operational efficiency by \textbf{25\%} through workflow automation.
+    \item Implemented a custom Django Admin back office with DRF APIs and payment integrations (Stripe, Telr), achieving \textbf{99.9\% transaction reliability}.
+    \item Delivered cross-platform mobile apps (Novus Assets Portfolio), increasing mobile feature delivery speed by \textbf{50\%}.
+    \item \textit{\textbf{Tech Stack:}} Python, Django/DRF, React Native, AWS, Jenkins, Bitbucket Pipelines.
 \end{itemize}
 
-\subsection*{Software Engineer \hfill Jan 2020 -- Mar 2021}
+\subsection*{Software Engineer \hfill Dubai, UAE}
 \vspace{-0.6em}
-\textit{sellanycar.com $|$ Dubai, UAE}
+\textbf{\textit{sellanycar.com \hfill Jan 2020 -- Mar 2021}}
+\vspace{-0.6em}
 \begin{itemize}
-    \item Developed an AWS-based serverless image-processing system using \textbf{OpenCV}, efficiently handling millions of uploads and reducing processing time by \textbf{40\%}.
-    \item Optimized orchestration by coordinating AWS Lambdas with \textbf{AWS Step Functions}, reducing execution time by \textbf{80\%}.
-    \item Integrated microservices with \textbf{GraphQL} and \textbf{RabbitMQ} for asynchronous communication, improving system resilience and performance by 30\%.
-    \item Established CI/CD pipelines using Jenkins, reducing manual deployment errors by \textbf{90\%}.
+    \item Created a highly efficient serverless image processing pipeline using OpenCV, AWS Lambda, and Step Functions, handling millions of uploads and reducing processing time by \textbf{40\%}.
+    \item Optimized workflow with AWS Step Functions, cutting system execution time by \textbf{80\%}.
+    \item Integrated microservices through GraphQL and RabbitMQ for asynchronous communication, improving performance by \textbf{30\%}.
+    \item Established CI/CD using Jenkins, eliminating \textbf{90\%} of manual deployment errors.
     \item \textit{\textbf{Tech Stack:}} Python, AWS (Lambda, Step Functions, CloudFormation), Node.js, GraphQL, RabbitMQ, OpenCV, PostgreSQL.
 \end{itemize}
 
-\subsection*{Software Engineer I/II \hfill Feb 2016 -- Dec 2019}
+\subsection*{Software Engineer I/II \hfill Karachi, Pakistan}
 \vspace{-0.6em}
-\textit{VentureDive $|$ Karachi, Pakistan}
+\textbf{\textit{VentureDive \hfill Feb 2016 -- Dec 2019}}
+\vspace{-0.6em}
 \begin{itemize}
-    \item Engineered and maintained microservices-based systems for \href{https://vistajet.com}{\textbf{vistajet.com}}, collaborating with remote teams in Brazil and Ukraine to build enterprise-scale applications.
-    \item Built Careem driver APIs and dashboards for \href{https://careem.com}{\textbf{Careem}}, enabling driver management and real-time monitoring.
-    \item Led full-stack development at \href{https://servicemarket.com}{\textbf{servicemarket.com}}, while streamlining CI/CD processes.
-    \item Migrated {\textbf{beatthemarket.com}} legacy infrastructure from Linode to AWS EC2, achieving a 90\% reduction in server costs and improving system reliability by 80\%.
-    \item Architected the \href{https://www.linkedin.com/company/zglue/}{\textbf{zGlue ChipBuilder}} CAD platform, enabling electronics engineers to visualize and manufacture IoT circuits by developing modular microservices.
-    \item \textit{\textbf{Tech Stack:}} Python, Django/DRF, Node.js, PHP, React, Microservices, Jenkins, AWS, Tableau.
+    \item Developed microservices powering \href{https://vistajet.com}{\textbf{VistaJet's}} global charter platform and collaborated with distributed teams in Brazil and Ukraine.
+    \item Led full-stack development for \href{https://servicemarket.com}{\textbf{ServiceMarket}}, optimizing CI/CD and feature rollout speed.
+    \item Migrated \href{https://insurancemarket.com}{\textbf{beatthemarket.com}} infrastructure from Linode to AWS EC2, reducing server costs by \textbf{90\%} and improving reliability by \textbf{80\%}.
+    \item Architected the \href{https://www.linkedin.com/company/zglue/}{\textbf{zGlue ChipBuilder}} CAD platform, enabling engineers to visualize and assemble IoT circuits via modular microservices.
+    \item \textit{\textbf{Tech Stack:}} Python, Django/DRF, Node.js, CakePHP, React, Microservices, Jenkins, AWS, Tableau.
 \end{itemize}
 
 \section*{Education}
+\vspace{-0.6em}
 \begin{itemize}[leftmargin=*]
     \item \textbf{Bachelor of Computer Science} \hfill 2012 -- 2015\\
-    \textit{University of Karachi}
+    \textbf{\textit{University of Karachi}}
 \end{itemize}
 
 
 \section*{Certifications and Awards}
+\vspace{-0.6em}
 \begin{itemize}[leftmargin=*]
     \item \textit{AWS Certified Solutions Architect - Associate} \hfill 2016
     \item \textit{Winner - VentureDive's Hackathon} \hfill 2018
