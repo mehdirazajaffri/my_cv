@@ -1,0 +1,195 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Dr. Ramsha Batool
+  headline: General Practitioner | DHA Licensed | GMC (UK) Registered | MRCP Part 1 & Part 2  | Golden Visa Holder
+  location: Dubai, United Arab Emirates
+  email: ramiftikhar691@gmail.com
+  phone: "+971505183213"
+  social_networks:
+    - network: LinkedIn
+      username: ramsha-batool-gp
+  sections:
+    professional_summary:
+      - Dedicated general practitioner with broad experience in primary care, chronic disease management, and home health services. Known for evidence-based decision making, strong patient communication, and commitment to regulatory compliance. Completed PLAB, MRCP Part 1, and MRCP Part 2; continually advancing clinical knowledge and quality of care.
+    licenses_and_status:
+      - "Licenses: DHA #73456119 | GMC #7930468 | PMC #78244-S"
+      - "UAE Golden Visa Holder | UAE Driving License | Immediately available to join"
+    core_competencies:
+      - bullet: Comprehensive patient assessment and examination
+      - bullet: Chronic disease management (diabetes, hypertension, asthma)
+      - bullet: Evidence-based treatment planning
+      - bullet: Preventive and family medicine
+      - bullet: Emergency and acute care stabilization
+      - bullet: Electronic medical records (EMR) documentation
+      - bullet: Clinical audit and quality assurance
+      - bullet: Multidisciplinary team leadership and mentoring
+      - bullet: Patient education and counselling
+      - bullet: Insurance coordination and billing workflows
+    experience:
+      - company: Chris One Point Homecare
+        position: Medical Director
+        start_date: 2025-06
+        end_date: present
+        location: Dubai, UAE
+        highlights:
+          - Direct clinical operations to deliver safe, patient-centred homecare services for diverse caseloads.
+          - Supervise and mentor a multidisciplinary medical team to uphold high care standards and compliance.
+          - Develop and implement evidence-based protocols and policies that improve patient outcomes and service efficiency.
+          - Review complex cases, guide treatment decisions, and coordinate referrals to external specialists as needed.
+          - Lead quality audits and performance reviews to ensure adherence to regulatory and accreditation requirements.
+          - Partner with executive leadership on strategic initiatives that elevate patient satisfaction and operational performance.
+      - company: Platinum Healthcare
+        position: General Practitioner
+        start_date: 2025-06
+        end_date: present
+        location: Al Qusais, Dubai, UAE
+        highlights:
+          - Provide comprehensive consultations, follow-up care, and acute treatments for patients across all age groups.
+          - Manage chronic conditions including diabetes, hypertension, and asthma with individualized care plans.
+          - Order, review, and interpret diagnostic investigations to support accurate clinical decisions.
+          - Deliver preventive services, vaccinations, and routine screenings to promote long-term wellness.
+          - Coordinate multidisciplinary care and specialist referrals to ensure complete patient management.
+          - Liaise with major medical insurance providers to streamline authorization, billing, and claims processes.
+          - Maintain accurate EMR documentation aligned with clinical governance standards.
+          - Raised patient satisfaction and follow-up adherence by 20% through proactive communication and care planning.
+          - Manage 10–12 daily consultations while sustaining high clinical quality and service metrics.
+      - company: Noor Medical Centre
+        position: General Practitioner
+        start_date: 2022-01
+        end_date: 2025-01
+        location: Dubai, UAE
+        highlights:
+          - Conducted comprehensive history taking and physical examinations for acute and chronic presentations.
+          - Formulated accurate diagnoses using clinical judgement alongside laboratory and imaging findings.
+          - Implemented evidence-based treatment plans tailored to patient needs and medical best practice.
+          - Provided education on disease prevention, lifestyle modification, and medication adherence.
+          - Coordinated advanced investigations and specialist referrals for complex cases.
+          - Maintained meticulous patient records in line with healthcare regulations and confidentiality standards.
+      - company: Jinnah Postgraduate Medical Centre
+        position: House Officer
+        start_date: 2019-04
+        end_date: 2020-06
+        location: Karachi, Pakistan
+        highlights:
+          - Rotated through Accident & Emergency, General Medicine, General Surgery, and Anaesthesia/ICU (three months each).
+          - Maintained detailed patient documentation supporting continuity of care across high-volume departments.
+          - Ensured adherence to infection control, health, and safety protocols within multidisciplinary teams.
+          - Facilitated timely referrals and escalation for patients with complex clinical needs.
+      - company: My Inter Academy
+        position: Online Instructor
+        start_date: 2018-01
+        end_date: 2018-12
+        location: Remote
+        highlights:
+          - Delivered virtual Botany I & II lessons for high school students via interactive online sessions.
+          - Created digital learning materials and assessments to reinforce foundational science concepts.
+          - Featured sessions on the institution's YouTube learning channel to expand reach and engagement.
+    education:
+      - institution: Jinnah Sindh Medical University
+        area: Medicine
+        degree: MBBS
+        start_date: 2013-11
+        end_date: 2018-12
+        location: Karachi, Pakistan
+        highlights:
+          - "PLAB, 2022"
+          - "MRCP Part 1"
+          - "MRCP Part 2"
+    certifications_and_courses:
+      - bullet: '[Advanced Cardiac Life Support (ACLS)](https://drive.google.com/file/d/1E8XOtF89mgY4qOdTR3bYIP_lBqWW2AS4/view?usp=sharing)'
+      - bullet: '[Infection Prevention and Control](https://drive.google.com/file/d/1-nO4B3Wke90wIBe0PfPcolCNRB0oedlH/view?usp=sharing)'
+      - bullet: '[Cardiology in Primary Care](https://drive.google.com/file/d/13m-N7SaEGEHE-dVFXlW92VU1zKTzSSgP/view?usp=sharing)'
+      - bullet: '[Fellowship in Diabetes](https://drive.google.com/file/d/1KarBhv2HWtflw30leo5xnW23jluMzpJI/view?usp=sharing)'
+    research_and_publications:
+      - bullet: '[Evaluation of Non-Pharmacological Remedies adopted by the patients with diabetes mellitus type II](https://www.pafmj.org/index.php/PAFMJ/article/view/4700)'
+      - bullet: '[Assessment of sleep quality in patients with type two diabetes mellitus](https://www.pafmj.org/index.php/PAFMJ/article/view/4585)'
+      - bullet: '[Frequency of regular voluntary blood donors and factors associated with blood donations in Karachi](https://pjmd.zu.edu.pk/volume-9-issue-2/volume-9-issue-2-2020)'
+    languages:
+      - label: Languages
+        details: English (Fluent), Hindi (Fluent), Arabic (Basic)
+design:
+  theme: engineeringresumes
+  page:
+    show_top_note: false
+    show_footer: false
+    top_margin: 0.5in
+    bottom_margin: 0.5in
+    left_margin: 0.55in
+    right_margin: 0.55in
+  colors:
+    body: rgb(45, 45, 45)
+    name: rgb(0, 82, 118)
+    headline: rgb(55, 85, 105)
+    connections: rgb(0, 82, 118)
+    section_titles: rgb(0, 82, 118)
+    links: rgb(0, 95, 130)
+  typography:
+    line_spacing: 0.54em
+    alignment: left
+    font_family:
+      body: Source Sans 3
+      name: XCharter
+      headline: Source Sans 3
+      connections: Source Sans 3
+      section_titles: XCharter
+    font_size:
+      body: 10pt
+      name: 27pt
+      headline: 9.5pt
+      connections: 9.5pt
+      section_titles: 1.2em
+    small_caps:
+      section_titles: true
+    bold:
+      name: true
+      section_titles: true
+  links:
+    underline: true
+  header:
+    space_below_name: 0.4cm
+    space_below_headline: 0.3cm
+    space_below_connections: 0.4cm
+    connections:
+      separator: '|'
+      space_between_connections: 0.4cm
+  section_titles:
+    line_thickness: 0.4pt
+    space_above: 0.38cm
+    space_below: 0.2cm
+  sections:
+    space_between_text_based_entries: 0.1em
+    space_between_regular_entries: 1em
+  entries:
+    side_space: 0.15cm
+    summary:
+      space_above: 0.1cm
+    highlights:
+      bullet: ●
+      nested_bullet: ◦
+      space_above: 0.1cm
+      space_between_items: 0.1cm
+      space_between_bullet_and_text: 0.42em
+  templates:
+    experience_entry:
+      main_column: |-
+        **COMPANY**
+        *POSITION* · LOCATION
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: DATE
+    education_entry:
+      main_column: |-
+        **INSTITUTION**
+        *DEGREE in AREA* · LOCATION
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column: DATE
+locale:
+  language: english
+settings:
+  current_date: today
+  render_command:
+    output_folder: rendercv_output
+    pdf_path: OUTPUT_FOLDER/NAME_IN_SNAKE_CASE_CV.pdf
+  bold_keywords: []
+  pdf_title: Dr. Ramsha Batool - CV

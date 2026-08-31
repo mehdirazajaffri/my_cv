@@ -56,3 +56,5 @@ htmlcov/
 dmypy.json
 
 *.__pycache__
+
+rendercv_output/
