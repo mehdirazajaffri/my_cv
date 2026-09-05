@@ -26,18 +26,6 @@ cv:
       - bullet: Patient education and counselling
       - bullet: Insurance coordination and billing workflows
     experience:
-      - company: Chris One Point Homecare
-        position: Medical Director
-        start_date: 2025-06
-        end_date: present
-        location: Dubai, UAE
-        highlights:
-          - Direct clinical operations to deliver safe, patient-centred homecare services for diverse caseloads.
-          - Supervise and mentor a multidisciplinary medical team to uphold high care standards and compliance.
-          - Develop and implement evidence-based protocols and policies that improve patient outcomes and service efficiency.
-          - Review complex cases, guide treatment decisions, and coordinate referrals to external specialists as needed.
-          - Lead quality audits and performance reviews to ensure adherence to regulatory and accreditation requirements.
-          - Partner with executive leadership on strategic initiatives that elevate patient satisfaction and operational performance.
       - company: Platinum Healthcare
         position: General Practitioner
         start_date: 2025-06
@@ -53,6 +41,18 @@ cv:
           - Maintain accurate EMR documentation aligned with clinical governance standards.
           - Raised patient satisfaction and follow-up adherence by 20% through proactive communication and care planning.
           - Manage 10–12 daily consultations while sustaining high clinical quality and service metrics.
+      - company: Chris One Point Homecare
+        position: Medical Director
+        start_date: 2025-06
+        end_date: present
+        location: Dubai, UAE
+        highlights:
+          - Direct clinical operations to deliver safe, patient-centred homecare services for diverse caseloads.
+          - Supervise and mentor a multidisciplinary medical team to uphold high care standards and compliance.
+          - Develop and implement evidence-based protocols and policies that improve patient outcomes and service efficiency.
+          - Review complex cases, guide treatment decisions, and coordinate referrals to external specialists as needed.
+          - Lead quality audits and performance reviews to ensure adherence to regulatory and accreditation requirements.
+          - Partner with executive leadership on strategic initiatives that elevate patient satisfaction and operational performance.
       - company: Noor Medical Centre
         position: General Practitioner
         start_date: 2022-01
@@ -108,7 +108,7 @@ cv:
       - label: Languages
         details: English (Fluent), Hindi (Fluent), Arabic (Basic)
 design:
-  theme: engineeringresumes
+  theme: engineeringclassic
   page:
     show_top_note: false
     show_footer: false
