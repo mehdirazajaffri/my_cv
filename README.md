@@ -1,165 +1,108 @@
-# My CV
+# CV workspace
 
-A LaTeX-based curriculum vitae template that is ATS-friendly and designed for professional use.
+LaTeX CVs and cover letters, plus a Streamlit app that rewrites a CV against a job description and scores ATS match.
 
-## Features
+Documents live under `people/`, one folder per person. The app and compile script stay at the repo root.
 
-- Clean, professional design optimized for ATS (Applicant Tracking Systems)
-- Uses Times New Roman font (ATS-friendly serif font)
-- Minimal color scheme for maximum compatibility
-- Well-structured sections for professional experience, education, and certifications
-- Responsive layout with proper spacing and formatting
-
-## Prerequisites
-
-You need a LaTeX distribution installed on your system to compile this document.
-
-### Installing LaTeX on macOS
-
-#### Option 1: MacTeX (Full Distribution - Recommended)
-
-MacTeX is the complete TeX Live distribution for macOS. It includes all LaTeX packages and tools.
-
-**Using Homebrew:**
-```bash
-brew install --cask mactex
-```
-
-**Manual Installation:**
-1. Download MacTeX from [https://www.tug.org/mactex/](https://www.tug.org/mactex/)
-2. Run the installer package
-3. After installation, update your PATH:
-   ```bash
-   eval "$(/usr/libexec/path_helper)"
-   ```
-   Or restart your terminal.
-
-#### Option 2: BasicTeX (Minimal Distribution)
-
-For a smaller installation (~100MB instead of ~4GB):
-
-```bash
-brew install --cask basictex
-eval "$(/usr/libexec/path_helper)"
-```
-
-You may need to install additional packages:
-```bash
-sudo tlmgr update --self
-sudo tlmgr install enumitem hyperref titlesec fontawesome5 tikz
-```
-
-### Installing LaTeX on Linux
-
-#### Ubuntu/Debian
-
-```bash
-sudo apt-get update
-sudo apt-get install texlive-full
-```
-
-For a minimal installation:
-```bash
-sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended
-```
-
-#### Fedora/RHEL/CentOS
-
-```bash
-sudo dnf install texlive-scheme-full
-```
-
-For a minimal installation:
-```bash
-sudo dnf install texlive-latex texlive-collection-latexextra texlive-collection-fontsrecommended
-```
-
-#### Arch Linux
-
-```bash
-sudo pacman -S texlive-most
-```
-
-For a minimal installation:
-```bash
-sudo pacman -S texlive-core texlive-latex texlive-fontsextra
-```
-
-
-## Actual Rendering to PDF
-
-Once LaTeX is installed, compile the document:
-
-```bash
-pdflatex -interaction=nonstopmode my_cv.tex
-```
-
-For better results (resolving cross-references), run it twice:
-
-```bash
-pdflatex -interaction=nonstopmode my_cv.tex
-pdflatex my_cv.tex
-```
-
-Or in a single command:
-
-```bash
-pdflatex my_cv.tex && pdflatex my_cv.tex
-```
-
-The output will be `my_cv.pdf` in the same directory.
-
-### Non-interactive Mode
-
-To suppress interactive prompts during compilation:
-
-```bash
-pdflatex -interaction=nonstopmode my_cv.tex
-```
-
-## Required LaTeX Packages
-
-The CV uses the following packages (usually included in standard LaTeX distributions):
-
-- `geometry` - Page margins and layout
-- `enumitem` - Customized list formatting
-- `hyperref` - Hyperlinks (configured with hidelinks for ATS compatibility)
-- `titlesec` - Section title formatting
-- `times` - Times New Roman font
-- `fontawesome5` - FontAwesome icons
-- `tikz` - Graphics and diagrams
-- `array` - Advanced table formatting
-
-## File Structure
+## Layout
 
 ```
 my_cv/
-├── my_cv.tex          # Main LaTeX source file
-├── my_cv.pdf          # Compiled PDF (generated)
-├── my_cv.aux          # Auxiliary file (generated)
-├── my_cv.log          # Compilation log (generated)
-├── my_cv.out          # Hyperref output (generated)
-└── README.md          # This file
+├── app.py                          # Streamlit ATS optimizer
+├── requirements.txt
+├── people/
+│   ├── mehdi/
+│   │   ├── Mehdi_Raza_Software_Engineer.tex
+│   │   ├── Mehdi_Raza_Software_Engineer.pdf
+│   │   ├── cover_letter.tex
+│   │   └── cover_letter.pdf
+│   └── ramsha/
+│       ├── Ramsha_Batool_CV.tex    # ATS-oriented LaTeX CV
+│       ├── Ramsha_Batool_CV.pdf
+│       ├── Ramsha_Batool_CV.yaml   # RenderCV source (optional)
+│       ├── Ramsha_Batool_Cover_Letter.tex
+│       └── Ramsha_Batool_Cover_Letter.pdf
+├── scripts/
+│   └── compile_cv.sh               # pdflatex helper
+└── utils/                          # LLM, LaTeX compile, ATS helpers
 ```
 
-## Customization
+Generated files (`output/`, `logs/`, `rendercv_output/`, `*.aux`, `*.log`) are gitignored.
 
-Edit `my_cv.tex` to update:
+## Compile a CV
 
-- Personal information (name, contact details)
-- Professional summary
-- Work experience
-- Education
-- Technical skills
-- Certifications
+Needs a LaTeX distribution (`pdflatex` on your PATH). From the repo root:
 
-## Notes
+```bash
+./scripts/compile_cv.sh mehdi
+./scripts/compile_cv.sh ramsha
+./scripts/compile_cv.sh all
+./scripts/compile_cv.sh ramsha clean   # also remove aux files
+```
 
-- The CV is designed to be ATS-friendly with minimal formatting and standard fonts
-- Hyperlinks are hidden using `hidelinks` option for better ATS compatibility
-- The document uses A4 paper size with custom margins
-- Times New Roman font is used for maximum ATS compatibility
+`./compile_cv.sh` at the repo root is a shortcut to the same script.
+
+Or compile a file directly:
+
+```bash
+cd people/ramsha
+pdflatex -interaction=nonstopmode Ramsha_Batool_CV.tex
+pdflatex -interaction=nonstopmode Ramsha_Batool_CV.tex
+```
+
+The Mehdi compile also copies the PDF to iCloud `Documents/_CV` when that folder exists.
+
+### Optional: RenderCV (Ramsha YAML)
+
+```bash
+uv tool install "rendercv[full]"
+rendercv render people/ramsha/Ramsha_Batool_CV.yaml
+```
+
+## Streamlit ATS app
+
+Rewrites Mehdi’s LaTeX CV against a pasted job description and can score the match.
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Put API keys in `.streamlit/secrets.toml` (not committed):
+
+```toml
+OPENAI_API_KEY = "..."
+GEMINI_API_KEY = "..."
+```
+
+The sidebar reloads `people/mehdi/Mehdi_Raza_Software_Engineer.tex`. Generated PDFs go to `output/`.
+
+## Install LaTeX
+
+**macOS (recommended):** `brew install --cask mactex`, then restart the terminal.
+
+**macOS (smaller):** `brew install --cask basictex`, then:
+
+```bash
+sudo tlmgr update --self
+sudo tlmgr install enumitem hyperref titlesec
+```
+
+**Ubuntu/Debian:** `sudo apt-get install texlive-latex-base texlive-latex-extra texlive-fonts-recommended`
+
+**Fedora:** `sudo dnf install texlive-latex texlive-collection-latexextra texlive-collection-fontsrecommended`
+
+Packages used: `geometry`, `enumitem`, `hyperref`, `titlesec`, `times`. Mehdi’s CV also uses `fontawesome5`.
+
+## Editing
+
+- **Mehdi:** edit `people/mehdi/Mehdi_Raza_Software_Engineer.tex`
+- **Ramsha:** edit `people/ramsha/Ramsha_Batool_CV.tex` (this is the ATS-safe version used for applications)
+
+Keep CVs as text PDFs (Times, standard headings, single column, no icon fonts in Ramsha’s file) so applicant tracking systems can parse name, contact, jobs, and dates.
 
 ## License
 
-This CV template is for personal use.
+Personal use.

@@ -52,7 +52,7 @@ else:
 # ---------------------
 if "latex_cv" not in st.session_state:
     # Auto-load CV from file
-    cv_file = Path("Mehdi_Raza_Software_Engineer.tex")
+    cv_file = Path("people/mehdi/Mehdi_Raza_Software_Engineer.tex")
     if cv_file.exists():
         with open(cv_file, "r", encoding="utf-8") as f:
             st.session_state["latex_cv"] = f.read()
@@ -121,7 +121,7 @@ with st.sidebar:
     # Quick actions
     st.subheader("🔧 Quick Actions")
     if st.button("🔄 Reload CV File", use_container_width=True):
-        cv_file = Path("Mehdi_Raza_Software_Engineer.tex")
+        cv_file = Path("people/mehdi/Mehdi_Raza_Software_Engineer.tex")
         if cv_file.exists():
             with open(cv_file, "r", encoding="utf-8") as f:
                 st.session_state["latex_cv"] = f.read()

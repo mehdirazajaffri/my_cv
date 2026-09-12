@@ -1,6 +1,10 @@
 *.aux
 *.log
 *.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.toc
 
 # Streamlit secrets - never commit API keys!
 .streamlit/secrets.toml

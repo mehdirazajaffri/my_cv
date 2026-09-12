@@ -57,7 +57,7 @@ cv:
         position: General Practitioner
         start_date: 2022-01
         end_date: 2025-01
-        location: Dubai, UAE
+        location: Karachi, Pakistan
         highlights:
           - Conducted comprehensive history taking and physical examinations for acute and chronic presentations.
           - Formulated accurate diagnoses using clinical judgement alongside laboratory and imaging findings.
@@ -106,7 +106,7 @@ cv:
       - bullet: '[Frequency of regular voluntary blood donors and factors associated with blood donations in Karachi](https://pjmd.zu.edu.pk/volume-9-issue-2/volume-9-issue-2-2020)'
     languages:
       - label: Languages
-        details: English (Fluent), Hindi (Fluent), Arabic (Basic)
+        details: English (Fluent), Hindi/Urdu (Fluent), Arabic (Basic)
 design:
   theme: engineeringclassic
   page:
